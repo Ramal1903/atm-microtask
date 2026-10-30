@@ -43,34 +43,36 @@ while True:
         else:
             break
 
+theUsername = input("Enter your username: ")
 thePassword=input("Enter your password: ")
 while True:
-    for user in users:
-        if thePassword==user["password"]:
-            new_password=input("Enter the new password(At least 8 characters and at least 1 uppercase, 1 lowercase, 1 digit): ")
-            password_repeat=input("Enter the new password again: ")
-            if new_password==password_repeat:
-                if len(new_password)>=8:
-
-                    digit=0
-                    upper=0
-                    lower=0
-                    for i in new_password:
-                        if i.isdigit():
-                            digit+=1
-                        elif i.upper()==i:
-                            upper+=1
-                        elif i.lower()==i:
-                            lower+=1
-                    if upper!=0 and lower!=0 and digit!=0:
-                        
-                    elif upper==0:
-                        print("Weak password: no uppercase letters")
-                    elif lower==0:
-                        print("Weak password: no lowercase letters")
-                    elif digit==0:
-                        print("Weak password: no digits")
-                else:
-                    print("Password have to be at least 8 characters")
+    if thePassword==loggedin_user["password"] and theUsername==loggedin_user["username"]:
+        new_password=input("Enter the new password(At least 8 characters and at least 1 uppercase, 1 lowercase, 1 digit): ")
+        password_repeat=input("Enter the new password again: ")
+        if new_password==password_repeat:
+            if len(new_password)>=8:
+                digit=0
+                upper=0
+                lower=0
+                for i in new_password:
+                    if i.isdigit():
+                        digit+=1
+                    elif i.isupper():
+                        upper+=1
+                    elif i.islower():
+                        lower+=1
+                if upper!=0 and lower!=0 and digit!=0:
+                    loggedin_user["password"]=new_password
+                    break
+                elif upper==0:
+                    print("Weak password: no uppercase letters")
+                elif lower==0:
+                    print("Weak password: no lowercase letters")
+                elif digit==0:
+                    print("Weak password: no digits")
             else:
-                print("Enter the new password again correctly")
+                print("Password have to be at least 8 characters")
+        else:
+            print("Enter the new password again correctly")
+with open("users.json", "w") as file:
+    json.dump(data, file, indent=4)
