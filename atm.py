@@ -44,12 +44,12 @@ while True:
             break
 
 theUsername = input("Enter your username: ")
-thePassword=input("Enter your password: ")
+thePassword = input("Enter your password: ")
 while True:
     if thePassword==loggedin_user["password"] and theUsername==loggedin_user["username"]:
         new_password=input("Enter the new password(At least 8 characters and at least 1 uppercase, 1 lowercase, 1 digit): ")
         password_repeat=input("Enter the new password again: ")
-        if new_password==password_repeat:
+        if new_password!=loggedin_user["password"] and new_password==password_repeat:
             if len(new_password)>=8:
                 digit=0
                 upper=0
