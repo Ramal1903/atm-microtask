@@ -1,6 +1,10 @@
 import time
 import json
-with open("users.json", "r") as file:
+import os
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(BASE_DIR, "data.json")
+with open(file_path, "r") as file:
     data = json.load(file)
 users = data["users"]
 attempt=0
