@@ -4,7 +4,7 @@ if choice==3:
     from datetime import date
 
     ATM = 500000            # money in ATM
-    USER_1 = 0              # balance
+    USER_1 = 0              # balance with coin
     DAILY_LIMIT = 200000    
     deposit_limit = DAILY_LIMIT   # todays limit
     last_day = date.today()       # this a thing that remain the limit for daily
