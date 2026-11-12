@@ -3,17 +3,26 @@
         {
             "username":"kelem",
             "password":"Ramal123",
-            "balance":2500.00
+            "balance":2500.00,
+            "ID":"10010001",
+            "deposit_used": 0,
+            "deposit_date": "2026-11-13"
         },
         {
             "username":"enderman",
             "password":"Dragon123",
-            "balance":1500.00
+            "balance":1500.00,
+            "ID":"10020001",
+            "deposit_used": 0,
+            "deposit_date": "2026-11-13"
         },
         {
             "username":"baklava",
             "password":"Nuwolsun123",
-            "balance":3000.00
+            "balance":3000.00,
+            "ID":"10030001",
+            "deposit_used": 0,
+            "deposit_date": "2026-11-13"
         },
         {
             "username":"admin",
