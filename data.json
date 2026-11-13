@@ -1,33 +1,69 @@
 {
     "users": [
         {
-            "username":"kelem",
-            "password":"Ramal123",
-            "balance":2500.00,
-            "ID":"10010001",
+            "username": "kelem",
+            "password": "Ramal123",
+            "balance": 2500.0,
+            "ID": "10010001",
+            "deposit_used": 10.0,
+            "deposit_date": "2026-11-13",
+            "withdraw_used": 10.0,
+            "transfers_used": 0,
+            "history": [
+                {
+                    "type": "Deposit",
+                    "amount": 1.0,
+                    "fee": 0.0,
+                    "balance_before": 2500.0,
+                    "balance_after": 2501.0,
+                    "date": "2026-11-13"
+                },
+                {
+                    "type": "Deposit",
+                    "amount": 4.0,
+                    "fee": 0.0,
+                    "balance_before": 2501.0,
+                    "balance_after": 2505.0,
+                    "date": "2026-11-13"
+                },
+                {
+                    "type": "Deposit",
+                    "amount": 5.0,
+                    "fee": 0.0,
+                    "balance_before": 2505.0,
+                    "balance_after": 2510.0,
+                    "date": "2026-11-13"
+                },
+                {
+                    "type": "Withdrawal",
+                    "amount": 10.0,
+                    "fee": 0.0,
+                    "balance_before": 2510.0,
+                    "balance_after": 2500.0,
+                    "date": "2026-11-13"
+                }
+            ]
+        },
+        {
+            "username": "enderman",
+            "password": "Dragon123",
+            "balance": 1500.0,
+            "ID": "10020001",
             "deposit_used": 0,
             "deposit_date": "2026-11-13"
         },
         {
-            "username":"enderman",
-            "password":"Dragon123",
-            "balance":1500.00,
-            "ID":"10020001",
+            "username": "baklava",
+            "password": "Nuwolsun123",
+            "balance": 3000.0,
+            "ID": "10030001",
             "deposit_used": 0,
             "deposit_date": "2026-11-13"
         },
         {
-            "username":"baklava",
-            "password":"Nuwolsun123",
-            "balance":3000.00,
-            "ID":"10030001",
-            "deposit_used": 0,
-            "deposit_date": "2026-11-13"
-        },
-        {
-            "username":"admin",
-            "password":"Admin123"
+            "username": "admin",
+            "password": "Admin123"
         }
-    ]
+    ],
+    "atm": 5000.0
 }
-
