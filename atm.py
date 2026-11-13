@@ -50,9 +50,9 @@ while True:
 if logged_in:
     current_user = loggedin_user
     while True:
-        print("=" * 36)
-        print(" PYTHON BANKING SYSTEM")
-        print("=" * 36)
+        print("=" * 37)
+        print("------------ KELEM BANK ------------")
+        print("=" * 37)
         print(f"Welcome, {username}!")
         print()
         print("1. View Account Information")
@@ -400,7 +400,7 @@ if logged_in:
             print("Logged out successfully.")
             break
         elif choice == "0":
-            print("Thank you for using Python Banking System.")
+            print("Thank you for using Kelem Bank.")
             break
         else:
             print("Invalid choice. Please try again.")
